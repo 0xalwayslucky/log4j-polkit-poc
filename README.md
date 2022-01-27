@@ -1,7 +1,7 @@
-# poc
-Vulnerable instance for the log4j apache exploit and privilege escalation with polkit
-- The vulnable spring-boot-application.jar was extracted from [here](https://hub.docker.com/r/andylibrian/log4shell-vulnerable-app/tags)
-- The malicious JNDI server was downloaded from [here](https://log4j-knox.s3.amazonaws.com/JNDIExploit-1.2-SNAPSHOT.jar) and referenced on [this](https://github.com/kubearmor/log4j-CVE-2021-44228) article.
+#  log4j CVE-2021-44228 + polkit CVE-2021-4034
+Vulnerable instance for the log4j apache exploit and privilege escalation using polkit
+- The vulnable spring-boot-application.jar was extracted from [this docker image](https://hub.docker.com/r/andylibrian/log4shell-vulnerable-app/tags)
+- The malicious JNDI server was downloaded from [here](https://log4j-knox.s3.amazonaws.com/JNDIExploit-1.2-SNAPSHOT.jar) and referenced on [this article](https://github.com/kubearmor/log4j-CVE-2021-44228).
 
 ## creating the vulnerable instances
 > Note: the Dockerfiles require certain versions of the vulnerable applications to be present within the ubuntu repositories. If these get updated and/or removed on any given time the docker image will fail to build. To solve this an image will be uploaded to the docker hub and linked here.
