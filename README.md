@@ -4,7 +4,7 @@ Vulnerable instance for the log4j apache exploit and privilege escalation using 
 - The malicious JNDI server was downloaded from [here](https://log4j-knox.s3.amazonaws.com/JNDIExploit-1.2-SNAPSHOT.jar) and referenced in [this article](https://github.com/kubearmor/log4j-CVE-2021-44228).
 
 ## PoC Video
-<follows-here>
+\<follows-here\>
 
 ## creating the vulnerable instances
 
