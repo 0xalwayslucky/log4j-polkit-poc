@@ -23,7 +23,7 @@ steps to create a vulnerable instance for log4j + polkit manually:
 > Note: the Dockerfiles require certain versions of the vulnerable applications to be present within the ubuntu repositories. If these get updated and/or removed on any given time the docker image will fail to build. To solve this an image will be uploaded to the docker hub and linked here.
 ```bash
 git clone https://github.com/0xalwayslucky/log4j-polkit-poc
-cd log4j-polkit-vuln
+cd log4j-polkit-poc/log4j-polkit-vuln
 docker build -t log4j-polkit-vulnerable-server .
 docker run -p 80:8080 --hostname victim log4j-polkit-vulnerable-server
 ```
@@ -34,7 +34,7 @@ This will simulate the attackers machine, in this case present within the same n
 steps to create a simulated attacker machine:
 ```bash
 git clone https://github.com/0xalwayslucky/log4j-polkit-poc
-cd attackserver
+cd log4j-polkit-poc/attackserver
 docker build -t attackserver .
 docker run -it --hostname attackserver attackserver /bin/bash
 java -jar JNDIExploit-1.2-SNAPSHOT.jar -i <ip> -p 8888 &  # in the docker container
